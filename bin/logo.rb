@@ -30,7 +30,7 @@ class Logo < Thor::Group
     image_string = @turtle_tracks.output_image
     puts image_string
                    
-    File.open('output'+ logo_file, "w") do |file|
+    File.open(logo_file+'_out', "w") do |file|
       file.printf(image_string)
     end
     
