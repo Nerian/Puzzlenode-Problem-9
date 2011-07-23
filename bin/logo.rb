@@ -6,12 +6,14 @@ require File.join(File.dirname(__FILE__), '..', 'lib', 'Turtle_tracks')
 class Logo < Thor::Group
   include Thor::Actions
   
-  desc "Interprets Logo files and show a visualization"
+  desc "Interprets Logo files and show a visualization"     
+  
+  argument :logo_file, :type => :string
   
   def one                           
     say '# Reading the file'      
     @commands = []
-    File.open("logo", "r") do |infile|
+    File.open(logo_file, "r") do |infile|
       while (line = infile.gets)
         if line.length > 1   
           @commands << line.strip
@@ -24,12 +26,15 @@ class Logo < Thor::Group
   def two
     say '# Parsing'                                         
     @turtle_tracks = Turtle_tracks.new(@commands)  
-    @turtle_tracks.parse
+    @turtle_tracks.parse   
+    image_string = @turtle_tracks.output_image
+    puts image_string
+                   
+    File.open('output'+ logo_file, "w") do |file|
+      file.printf(image_string)
+    end
+    
   end          
-  
-  def three
-    say '# Visual'
-  end
 end
 
 Logo.start

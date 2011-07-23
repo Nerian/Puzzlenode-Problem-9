@@ -10,7 +10,7 @@ class Turtle
     
   def forward(units)
     units = units.to_i
-    puts "moving forward, angle #{@angle}" 
+    puts "moving #{units} forward, angle #{@angle}" 
     units.times do     
       if @angle == 0 or @angle == -360
         @x += 1                       
@@ -49,10 +49,10 @@ class Turtle
   
   def backward(units)      
     units = units.to_i
-    puts "moving backwards, angle #{@angle}"   
+    puts "moving #{units} backwards, angle #{@angle}"   
     units.times do          
       if @angle == 0 or @angle == -360
-        @x -= units                       
+        @x -= 1                       
       end
       if @angle == 45 or @angle == -315
         @x -= 1
@@ -81,7 +81,8 @@ class Turtle
       end
       if @angle == 360
         @x -= 1  
-      end
+      end              
+      #puts "pon una x en #{@y} #{@x}"
       image[@y][@x] = 'x'  
     end  
   end

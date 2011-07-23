@@ -9,7 +9,7 @@ class Turtle_tracks
     @commands = commands                 
     validate()    
     initializate_image()        
-    mid_position = (@size/2)
+    mid_position = @size/2
     @turtle = Turtle.new(mid_position, mid_position, image)                        
   end    
   
@@ -25,8 +25,7 @@ class Turtle_tracks
         when /^LT \d*$/                             
           @turtle.rotate_counter_clockwise(command.match(/\d*$/)[0])
       end
-    end
-    output_image
+    end    
   end
   
   def validate                        
@@ -66,24 +65,31 @@ class Turtle_tracks
     @commands = tmp_command_list                                                 
   end
   
-  def output_image 
-    @image.each do |line|
-      line.each do |node|
-        print node + ' '
-      end       
-      print "\n"
-    end     
+  def output_image    
+    total = @image.size     
+    image = @image.clone
+    image_output = []
+    
+    image.each do |line|      
+      line << "\n"               
+      image_output << line.join(' ')
+      total -= 1
+      print "\rWorking: #{total}"
+    end          
+                        
+    puts "\nDone"         
+    image_output = image_output.flatten.join
   end
   
   def initializate_image
-    @image = []  
+    @image = Array.new
     @size.times do |x| 
       @image[x] = []
       @size.times do |y|
         @image[x][y] = '.'
       end                   
     end                     
-    mid_point = (@size/2)
+    mid_point = @size/2
     @image[mid_point][mid_point] = 'x'                        
   end  
 end    

@@ -35,8 +35,12 @@ describe Turtle_tracks do
     
     it "Should output a map with the frog at the center" do      
       
-      commands = ['10']                  
-      assert { capturing { Turtle_tracks.new(commands).parse } ==       
+      commands = ['10']          
+      turtle = Turtle_tracks.new(commands)
+      turtle.parse
+      output = turtle.output_image   
+      puts output
+      assert { output ==       
       ". . . . . . . . . . \n"+
       ". . . . . . . . . . \n"+
       ". . . . . . . . . . \n"+
