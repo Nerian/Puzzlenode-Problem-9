@@ -17,15 +17,16 @@ class Turtle_tracks
     @commands.each do |command|   
       case command
         when /^FD \d*$/
-          @turtle.forward(command.match(/\d*$/)[0])
+          @turtle.move(command.match(/\d*$/)[0], :direction => :forward )
         when /^BK \d*$/
-          @turtle.backward(command.match(/\d*$/)[0])
+          @turtle.move(command.match(/\d*$/)[0], :direction => :backward )
         when /^RT \d*$/                             
           @turtle.rotate_clockwise(command.match(/\d*$/)[0])
         when /^LT \d*$/                             
           @turtle.rotate_counter_clockwise(command.match(/\d*$/)[0])
       end
-    end    
+    end
+    #puts output_image    
   end
   
   def validate                        
