@@ -46,7 +46,7 @@ class Turtle
       if @angle == 360
         @x += 1 * direction
       end 
-      image[@y][@x] = 'x'     
+      image[@y][@x] = 'X'     
     end
   end      
   

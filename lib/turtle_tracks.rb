@@ -71,9 +71,9 @@ class Turtle_tracks
     image = @image.clone
     image_output = []
     
-    image.each do |line|      
-      line << "\n"               
+    image.each do |line|                           
       image_output << line.join(' ')
+      image_output << "\n"
       total -= 1
       print "\rWorking: #{total}"
     end          
@@ -91,6 +91,6 @@ class Turtle_tracks
       end                   
     end                     
     mid_point = @size/2
-    @image[mid_point][mid_point] = 'x'                        
+    @image[mid_point][mid_point] = 'X'                        
   end  
 end    

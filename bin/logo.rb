@@ -28,9 +28,9 @@ class Logo < Thor::Group
     @turtle_tracks = Turtle_tracks.new(@commands)  
     @turtle_tracks.parse   
     image_string = @turtle_tracks.output_image
-    puts image_string
+    puts image_string             
                    
-    File.open(logo_file+'_out', "w") do |file|
+    File.open(logo_file + '_out.txt', "w") do |file|
       file.printf(image_string)
     end
     

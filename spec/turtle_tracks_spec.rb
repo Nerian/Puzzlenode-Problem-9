@@ -5,8 +5,8 @@ describe Turtle_tracks do
   describe "# A Turtle_tracks object should be initialised" do
     
     it "with commands" do             
-      input_commands = ['11', 'RT 90', 'FD 5', 'BK 10', 'RT 45', 'REPEAT 2 [ RT 9 RT 90 FD 15 ]', 'LT 45']
-      executable_commands = ['RT 90', 'FD 5', 'BK 10', 'RT 45', 'RT 9', 'RT 90', 'FD 15', 'RT 9', 'RT 90', 'FD 15', 'LT 45']
+      input_commands = ['11', 'RT 90', 'FD 5', 'BK 10', 'RT 45', 'REPEAT 2 [ RT 9 RT 90 FD 15 FD 105 ]', 'LT 45']
+      executable_commands = ['RT 90', 'FD 5', 'BK 10', 'RT 45', 'RT 9', 'RT 90', 'FD 15', 'FD 105', 'RT 9', 'RT 90', 'FD 15','FD 105', 'LT 45']
       turtle_track = Turtle_tracks.new(input_commands.clone)          
       
       assert{ turtle_track.size  == 11}
@@ -41,21 +41,16 @@ describe Turtle_tracks do
       output = turtle.output_image   
       puts output
       assert { output ==       
-      ". . . . . . . . . . \n"+
-      ". . . . . . . . . . \n"+
-      ". . . . . . . . . . \n"+
-      ". . . . . . . . . . \n"+
-      ". . . . . . . . . . \n"+
-      ". . . . . x . . . . \n"+
-      ". . . . . . . . . . \n"+
-      ". . . . . . . . . . \n"+
-      ". . . . . . . . . . \n"+
-      ". . . . . . . . . . \n" }     
+      ". . . . . . . . . .\n"+
+      ". . . . . . . . . .\n"+
+      ". . . . . . . . . .\n"+
+      ". . . . . . . . . .\n"+
+      ". . . . . . . . . .\n"+
+      ". . . . . X . . . .\n"+
+      ". . . . . . . . . .\n"+
+      ". . . . . . . . . .\n"+
+      ". . . . . . . . . .\n"+
+      ". . . . . . . . . .\n" }     
     end                                   
   end     
 end                      
-
-
-def check_resulting_image()
-  
-end

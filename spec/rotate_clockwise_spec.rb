@@ -13,7 +13,7 @@ describe "RT" do
         @turtle_tracks.parse
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','x','.']
+        @turtle_tracks.image[2].should == ['.','.','X','X','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
@@ -26,7 +26,7 @@ describe "RT" do
         @turtle_tracks.parse                                   
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','x','x','.','.']
+        @turtle_tracks.image[2].should == ['.','X','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
         
@@ -45,8 +45,8 @@ describe "RT" do
 
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
-        @turtle_tracks.image[3].should == ['.','.','.','x','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
+        @turtle_tracks.image[3].should == ['.','.','.','X','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
     end
@@ -58,8 +58,8 @@ describe "RT" do
         @turtle_tracks.parse                           
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
-        @turtle_tracks.image[1].should == ['.','x','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
+        @turtle_tracks.image[1].should == ['.','X','.','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']          
       end          
@@ -78,8 +78,8 @@ describe "RT" do
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
-        @turtle_tracks.image[3].should == ['.','.','x','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
+        @turtle_tracks.image[3].should == ['.','.','X','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
     end
@@ -91,8 +91,8 @@ describe "RT" do
         @turtle_tracks.parse                           
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
-        @turtle_tracks.image[1].should == ['.','.','x','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
+        @turtle_tracks.image[1].should == ['.','.','X','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end          
@@ -111,8 +111,8 @@ describe "RT" do
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
-        @turtle_tracks.image[3].should == ['.','x','.','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
+        @turtle_tracks.image[3].should == ['.','X','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
     end
@@ -124,8 +124,8 @@ describe "RT" do
         @turtle_tracks.parse                           
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
-        @turtle_tracks.image[1].should == ['.','.','.','x','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
+        @turtle_tracks.image[1].should == ['.','.','.','X','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']        
       end          
@@ -144,7 +144,7 @@ describe "RT" do
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','x','x','.','.']
+        @turtle_tracks.image[2].should == ['.','X','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
@@ -158,7 +158,7 @@ describe "RT" do
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','x','.']
+        @turtle_tracks.image[2].should == ['.','.','X','X','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']          
       end          
@@ -176,8 +176,8 @@ describe "RT" do
         @turtle_tracks.parse                           
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
-        @turtle_tracks.image[1].should == ['.','x','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
+        @turtle_tracks.image[1].should == ['.','X','.','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
@@ -191,8 +191,8 @@ describe "RT" do
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
-        @turtle_tracks.image[3].should == ['.','.','.','x','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
+        @turtle_tracks.image[3].should == ['.','.','.','X','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.'] 
       end
     end
@@ -210,8 +210,8 @@ describe "RT" do
         @turtle_tracks.parse                           
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
-        @turtle_tracks.image[1].should == ['.','.','.','x','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
+        @turtle_tracks.image[1].should == ['.','.','.','X','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
@@ -225,8 +225,8 @@ describe "RT" do
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
-        @turtle_tracks.image[3].should == ['.','x','.','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
+        @turtle_tracks.image[3].should == ['.','X','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']         
       end          
     end    
@@ -242,8 +242,8 @@ describe "RT" do
         @turtle_tracks = Turtle_tracks.new(@commands)  
         @turtle_tracks.parse
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
-        @turtle_tracks.image[1].should == ['.','.','x','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
+        @turtle_tracks.image[1].should == ['.','.','X','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.'] 
       end
@@ -256,8 +256,8 @@ describe "RT" do
         @turtle_tracks.parse
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
-        @turtle_tracks.image[3].should == ['.','.','x','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
+        @turtle_tracks.image[3].should == ['.','.','X','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end          
     end    
@@ -273,8 +273,8 @@ describe "RT" do
         @turtle_tracks = Turtle_tracks.new(@commands)  
         @turtle_tracks.parse
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
-        @turtle_tracks.image[1].should == ['.','.','.','x','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
+        @turtle_tracks.image[1].should == ['.','.','.','X','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
@@ -287,8 +287,8 @@ describe "RT" do
         @turtle_tracks.parse
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','.','.']
-        @turtle_tracks.image[3].should == ['.','x','.','.','.']
+        @turtle_tracks.image[2].should == ['.','.','X','.','.']
+        @turtle_tracks.image[3].should == ['.','X','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end          
     end    
@@ -306,7 +306,7 @@ describe "RT" do
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','.','x','x','.']
+        @turtle_tracks.image[2].should == ['.','.','X','X','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']
       end
@@ -320,7 +320,7 @@ describe "RT" do
         
         @turtle_tracks.image[0].should == ['.','.','.','.','.']
         @turtle_tracks.image[1].should == ['.','.','.','.','.']
-        @turtle_tracks.image[2].should == ['.','x','x','.','.']
+        @turtle_tracks.image[2].should == ['.','X','X','.','.']
         @turtle_tracks.image[3].should == ['.','.','.','.','.']
         @turtle_tracks.image[4].should == ['.','.','.','.','.']          
       end          
