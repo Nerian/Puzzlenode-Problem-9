@@ -15,52 +15,54 @@ class Turtle
               
     puts "moving #{units.abs} #{options[:direction].to_s}, angle #{@angle}" 
     units.abs.times do                 
-      if @angle == 0 or @angle == -360
+      if @angle == 0
         @x += 1 * direction                       
       end
-      if @angle == 45 or @angle == -315
+      if @angle == 45
         @x += 1 * direction
         @y -= 1 * direction
       end
-      if @angle == 90 or @angle == -270
+      if @angle == 90
         @y -= 1 * direction
       end
-      if @angle == 135 or @angle== -225
+      if @angle == 135
         @x -= 1 * direction
         @y -= 1 * direction
       end
-      if @angle == 180 or @angle == -180
+      if @angle == 180
         @x -= 1 * direction
       end
-      if @angle==225 or @angle == -135
+      if @angle==225
         @x -= 1 * direction
         @y += 1 * direction
       end
-      if @angle == 270 or @angle== -90
+      if @angle == 270
         @y += 1 * direction
       end
-      if @angle==315 or @angle== -45    
+      if @angle==315
         @x += 1 * direction
         @y += 1 * direction
       end
       if @angle == 360
         @x += 1 * direction
       end 
-      image[@y][@x] = 'X'     
+      image[@y][@x] = 'X' unless image[@y].nil? or image[@y][@x].nil?
     end
-  end      
+  end     
   
-  def rotate_clockwise(angle)
-    angle = angle.to_i
-    print "Rotating from #{@angle}"
-    @angle -= angle      
-    puts " to #{@angle}"
-  end
-
-  def rotate_counter_clockwise(angle)
-    angle = angle.to_i
-    print "Rotating from #{@angle}"
-    @angle += angle                
-    puts " to #{@angle}"
-  end  
+  def rotate(units, options)    
+    angles = [0, 45, 90, 135, 180, 225, 270, 315, 360]
+    
+    if options[:direction] == :clockwise 
+      @angle -= units.to_i
+      if @angle < 0
+        @angle += 360
+      end
+    else
+      @angle += units.to_i
+      if @angle > 360  
+        @angle -= 360
+      end
+    end                
+  end 
 end

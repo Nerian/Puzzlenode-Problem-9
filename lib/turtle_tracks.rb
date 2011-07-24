@@ -21,13 +21,12 @@ class Turtle_tracks
           @turtle.move(command.match(/\d*$/)[0], :direction => :forward )
         when /^BK \d*$/
           @turtle.move(command.match(/\d*$/)[0], :direction => :backward )
-        when /^RT \d*$/                             
-          @turtle.rotate_clockwise(command.match(/\d*$/)[0])
+        when /^RT \d*$/   
+          @turtle.rotate(command.match(/\d*$/)[0], :direction => :clockwise)                          
         when /^LT \d*$/                             
-          @turtle.rotate_counter_clockwise(command.match(/\d*$/)[0])
+          @turtle.rotate(command.match(/\d*$/)[0], :direction => :counter_clockwise)
       end
     end
-    #puts output_image    
   end
   
   def validate                        
