@@ -1,4 +1,3 @@
-11
+61
 
-RT 270      
-RT 90
+REPEAT 4 [ FD 10 BK 10 RT 90]

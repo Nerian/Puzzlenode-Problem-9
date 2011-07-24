@@ -3,7 +3,7 @@ class Turtle
   
   def initialize(x, y, image, angle=90)    
     @x = x
-    @y = x        
+    @y = y        
     @image = image
     @angle = angle.to_i
   end     
@@ -14,7 +14,7 @@ class Turtle
     direction = options[:direction] == :backward ? -1 : 1   
               
     puts "moving #{units.abs} #{options[:direction].to_s}, angle #{@angle}" 
-    units.abs.times do     
+    units.abs.times do                 
       if @angle == 0 or @angle == -360
         @x += 1 * direction                       
       end
