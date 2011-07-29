@@ -24,12 +24,12 @@ The Turtle – a sort of pencil – starts at the center of the canvas. Using a 
 
 ## Format of the input file
 
-100  # The height of the canvas. It is a square.
-# empty line
-command 1
-command 2
-command 3
-command 4
+    100  # The height of the canvas. It is a square.
+    # empty line
+    command 1
+    command 2
+    command 3
+    command 4
 	
 # How to run the specs
 
